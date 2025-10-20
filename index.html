@@ -4,209 +4,37 @@
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <title>Lovely Joy D. Pangilan — Portfolio</title>
-  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;600;700&display=swap" rel="stylesheet" />
+  <link rel="stylesheet" href="style.css" />
   <style>
-    :root {
-      --blue: #0077cc;
-      --dark-blue: #003366;
-      --light-bg: #f4f9ff;
-      --white: #ffffff;
-      --shadow: 0 8px 20px rgba(0, 0, 0, 0.08);
-      --radius: 14px;
-    }
-
-    * {
-      margin: 0;
-      padding: 0;
-      box-sizing: border-box;
-      font-family: "Poppins", sans-serif;
-    }
-
-    body {
-      display: flex;
-      background: var(--light-bg);
-      color: #222;
-      min-height: 100vh;
-      overflow-x: hidden;
-    }
-
-    /* SIDEBAR */
-    .sidebar {
-      width: 270px;
-      background: linear-gradient(160deg, var(--blue), var(--dark-blue));
-      color: white;
-      display: flex;
-      flex-direction: column;
-      align-items: center;
-      padding: 30px 20px;
-      position: fixed;
-      top: 0;
-      left: 0;
-      bottom: 0;
+    .profile-section {
       text-align: center;
-      box-shadow: 4px 0 12px rgba(0, 0, 0, 0.1);
+      padding: 25px;
     }
 
     .profile-img {
-      width: 130px;
+      width: 130px;             /* size of the circular image */
       height: 130px;
-      border-radius: 50%;
-      object-fit: cover;
-      border: 3px solid #fff;
-      box-shadow: 0 4px 10px rgba(255, 255, 255, 0.4);
-      transition: transform 0.4s ease;
+      border-radius: 50%;       /* makes it a perfect circle */
+      object-fit: cover;        /* crop to fit the circle */
+      border: 4px solid #0077cc; /* blue border to match theme */
+      box-shadow: 0 4px 12px rgba(0, 0, 0, 0.3); /* nice shadow */
+      margin-bottom: 15px;
+      transition: transform 0.3s ease; /* smooth hover zoom */
     }
 
     .profile-img:hover {
-      transform: scale(1.08) rotate(2deg);
-    }
-
-    .sidebar h2 {
-      font-size: 1.3rem;
-      margin-top: 15px;
-      font-weight: 700;
-      letter-spacing: 0.5px;
+      transform: scale(1.05); /* subtle zoom on hover */
     }
 
     .tagline {
       font-size: 0.9rem;
-      opacity: 0.85;
-      margin-bottom: 20px;
-    }
-
-    .nav-links {
-      display: flex;
-      flex-direction: column;
-      gap: 12px;
-      width: 100%;
-      margin-top: 20px;
-    }
-
-    .nav-links a {
-      color: #ffffff;
-      text-decoration: none;
-      padding: 10px;
-      border-radius: var(--radius);
-      transition: all 0.3s ease;
-      font-weight: 500;
-    }
-
-    .nav-links a:hover {
-      background: rgba(255, 255, 255, 0.2);
-      transform: translateX(5px);
-    }
-
-    footer {
-      margin-top: auto;
-      font-size: 0.8rem;
-      opacity: 0.8;
-    }
-
-    /* MAIN CONTENT */
-    .main-content {
-      margin-left: 270px;
-      padding: 50px;
-      flex: 1;
-    }
-
-    .section {
-      background: var(--white);
-      border-radius: var(--radius);
-      box-shadow: var(--shadow);
-      padding: 30px;
-      margin-bottom: 30px;
-      transition: transform 0.3s ease, box-shadow 0.3s ease;
-    }
-
-    .section:hover {
-      transform: translateY(-5px);
-      box-shadow: 0 10px 25px rgba(0, 119, 204, 0.15);
-    }
-
-    h2 {
-      color: var(--dark-blue);
-      margin-bottom: 15px;
-      border-left: 6px solid var(--blue);
-      padding-left: 10px;
-      font-weight: 600;
-    }
-
-    p, li {
-      line-height: 1.6;
-      color: #333;
-    }
-
-    ul {
-      list-style: none;
-      margin-left: 10px;
-    }
-
-    li strong {
-      color: var(--blue);
-    }
-
-    /* CONTACT FORM */
-    form {
-      display: flex;
-      flex-direction: column;
-      gap: 14px;
-    }
-
-    input, textarea {
-      padding: 12px;
-      border: 1px solid #ccc;
-      border-radius: var(--radius);
-      font-size: 1rem;
-      outline: none;
-      transition: all 0.2s ease;
-    }
-
-    input:focus, textarea:focus {
-      border-color: var(--blue);
-      box-shadow: 0 0 6px rgba(0, 119, 204, 0.3);
-    }
-
-    .btn {
-      background: linear-gradient(135deg, var(--blue), var(--dark-blue));
-      color: white;
-      padding: 12px;
-      border: none;
-      border-radius: var(--radius);
-      font-weight: 600;
-      cursor: pointer;
-      transition: transform 0.3s ease, opacity 0.3s ease;
-    }
-
-    .btn:hover {
-      transform: scale(1.05);
-      opacity: 0.9;
-    }
-
-    /* RESPONSIVE */
-    @media (max-width: 768px) {
-      .sidebar {
-        position: relative;
-        width: 100%;
-        flex-direction: row;
-        justify-content: space-around;
-        padding: 15px;
-      }
-
-      .main-content {
-        margin-left: 0;
-        padding: 20px;
-      }
-
-      .profile-img, .tagline {
-        display: none;
-      }
+      color: #444;
     }
   </style>
 </head>
-
 <body>
   <aside class="sidebar">
-    <div>
+    <div class="profile-section">
       <img src="https://scontent.fdvo3-1.fna.fbcdn.net/v/t39.30808-6/480142091_1282407466319356_2080836848777294402_n.jpg?_nc_cat=102&ccb=1-7&_nc_sid=6ee11a&_nc_eui2=AeEXDAxDgBfqMM9UXYp4iiE2JuM-7Jp-1JIm4z7smn7UkqTx6jC3jnZPgvrrDVj8R89B3lN0PDF7_kRsQhPbUQvh&_nc_ohc=Y5Ck9nNjSi0Q7kNvwFjUuc2&_nc_oc=AdnYsJsbEG_MDY1vRmEAD6wps1I0LUgul6aiOEGKkD_FWj0nXFN2241P6ZWlL5sq-88&_nc_zt=23&_nc_ht=scontent.fdvo3-1.fna&_nc_gid=RJD3o3crFiLX9WolEg5igA&oh=00_AfcCP2mkCHt164QAdjlnmytqftKf6_dLdrb_seUuAyZIlw&oe=68FB8D4F" 
         alt="Lovely Joy D. Pangilan" class="profile-img">
       <h2>Lovely Joy D. Pangilan</h2>
@@ -221,17 +49,14 @@
       <a href="#labs">Labs</a>
       <a href="#contact">Contact</a>
     </nav>
-
-    <footer>
-      <p>© 2025 Lovely Joy D. Pangilan</p>
-    </footer>
   </aside>
 
   <main class="main-content">
     <section id="about" class="section">
-      <h2>🧍‍♀️ About Me</h2>
-      <p>“I’m Lovely Joy Pangilan, a passionate IT student who loves exploring how technology can improve everyday life. I enjoy learning new things and designing creative digital solutions.”</p>
-      <ul>
+      <h2>🧍‍♂️ About Me</h2>
+      <p>“I’m Lovely Koy Pangilan, and I’m passionate about Information Technology. 
+      I love learning new things and exploring how technology can improve everyday life.”</p>
+      <ul class="contact-info">
         <li><strong>Email:</strong> lovelyjoypangilan@gmail.com</li>
         <li><strong>Phone:</strong> 09536456513</li>
         <li><strong>Location:</strong> Philippines</li>
@@ -241,45 +66,49 @@
     <section id="education" class="section">
       <h2>🎓 Education</h2>
       <ul>
-        <li><strong>Davao del Sur State College</strong> — Diploma in Information Technology (2025–2026)</li>
-        <li><strong>Governor Nonito Llanos Sr. NHS</strong> — Senior High School (2023–2024)</li>
-        <li><strong>Isabello Calma Sr. Elementary School</strong> — Elementary (2015–2017)</li>
+        <li><strong>Davao del Sur State College</strong> — 2025–2026<br>
+        Diploma in Information Technology</li>
+        <li><strong>Governor Nonito Dllanos Sr. National Highschool</strong> — 2023–2024</li>
+        <li><strong>Isabello Calma Sr. Elementary School</strong> — 2015–2017</li>
       </ul>
     </section>
 
     <section id="experience" class="section">
       <h2>💼 Experience</h2>
       <p><strong>Intern – Registrar Office</strong> (July 2025 – August 2026)</p>
-      <p>Assisted staff with organizing student records, improving documentation processes, and maintaining efficient data systems.</p>
+      <p>I helped supervisors and staff organize student records, sort files, and improve workflow efficiency.</p>
     </section>
 
     <section id="projects" class="section">
       <h2>🧠 Projects</h2>
       <ul>
-        <li><strong>Restaurant Inventory Management System</strong> — A web-based app for tracking inventory and generating analytics reports.</li>
-        <li><strong>Farm Profiling DSS</strong> — A geospatial decision support system for Digos City OCAG using descriptive data analytics.</li>
+        <li><strong>Restaurant Inventory Management System</strong> — A web-based app to track inventory and analytics.</li>
+        <li><strong>Farm Profiling DSS</strong> — Geospatial decision support system for Digos City OCAG.</li>
       </ul>
     </section>
 
     <section id="labs" class="section">
       <h2>🧩 Labs</h2>
-      <p>These lab exercises enhanced my skills in web design, HTML/CSS, and system development:</p>
-      <ul>
-        <li>Portfolio Design</li>
-        <li>Inventory System Interface</li>
-        <li>Responsive Website Layouts</li>
-      </ul>
+      <p>Below are some of my lab activities that enhanced my skills in web development and design.</p>
     </section>
 
-    <section id="contact" class="section">
+    <section id="contact" class="section contact">
       <h2>📬 Contact Me</h2>
       <form id="contactForm">
-        <input type="text" placeholder="Your name" required>
-        <input type="email" placeholder="Your email" required>
-        <textarea placeholder="Your message" rows="4" required></textarea>
+        <input type="text" id="name" placeholder="Your name" required>
+        <input type="email" id="email" placeholder="Your email" required>
+        <textarea id="message" placeholder="Your message" required></textarea>
         <button type="submit" class="btn">Send Message</button>
+        <p id="formMsg"></p>
       </form>
     </section>
+
+    <footer class="footer">
+      <p>© 2025 Lovely Joy D. Pangilan — Portfolio</p>
+    </footer>
   </main>
+
+  <script src="script.js"></script>
 </body>
 </html>
+
