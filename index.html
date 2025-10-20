@@ -4,51 +4,205 @@
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <title>Lovely Joy D. Pangilan — Portfolio</title>
-  <link rel="stylesheet" href="style.css" />
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;600&display=swap" rel="stylesheet" />
   <style>
+    * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+      font-family: "Poppins", sans-serif;
+    }
+
+    body {
+      display: flex;
+      min-height: 100vh;
+      background-color: #f8fbff; /* light blue background */
+      color: #222;
+    }
+
+    /* Sidebar */
+    .sidebar {
+      width: 260px;
+      background: #ffffff;
+      box-shadow: 4px 0 10px rgba(0, 0, 0, 0.05);
+      padding-top: 30px;
+      position: fixed;
+      top: 0;
+      left: 0;
+      bottom: 0;
+      display: flex;
+      flex-direction: column;
+      justify-content: space-between;
+    }
+
     .profile-section {
       text-align: center;
-      padding: 25px;
+      padding: 20px;
     }
 
     .profile-img {
-      width: 130px;             /* size of the circular image */
-      height: 130px;
-      border-radius: 50%;       /* makes it a perfect circle */
-      object-fit: cover;        /* crop to fit the circle */
-      border: 4px solid #0077cc; /* blue border to match theme */
-      box-shadow: 0 4px 12px rgba(0, 0, 0, 0.3); /* nice shadow */
+      width: 120px;
+      height: 120px;
+      border-radius: 50%;
+      object-fit: cover;
+      border: 3px solid #cce5ff;
+      box-shadow: 0 4px 8px rgba(0, 0, 0, 0.15);
       margin-bottom: 15px;
-      transition: transform 0.3s ease; /* smooth hover zoom */
+      transition: transform 0.3s ease;
     }
 
     .profile-img:hover {
-      transform: scale(1.05); /* subtle zoom on hover */
+      transform: scale(1.05);
     }
 
     .tagline {
       font-size: 0.9rem;
-      color: #444;
+      color: #555;
+    }
+
+    .nav-links {
+      display: flex;
+      flex-direction: column;
+      text-align: center;
+      padding: 10px;
+    }
+
+    .nav-links a {
+      text-decoration: none;
+      color: #0077cc;
+      font-weight: 500;
+      padding: 10px 0;
+      border-radius: 8px;
+      transition: all 0.2s ease;
+    }
+
+    .nav-links a:hover {
+      background: #eaf4ff;
+      color: #004080;
+    }
+
+    /* Main content */
+    .main-content {
+      margin-left: 260px;
+      padding: 40px;
+      width: 100%;
+    }
+
+    .section {
+      background: #ffffff;
+      padding: 25px;
+      border-radius: 12px;
+      margin-bottom: 25px;
+      box-shadow: 0 4px 12px rgba(0, 0, 0, 0.05);
+      transition: transform 0.2s;
+    }
+
+    .section:hover {
+      transform: translateY(-2px);
+    }
+
+    h2 {
+      color: #004080;
+      margin-bottom: 15px;
+    }
+
+    p, li {
+      color: #333;
+      line-height: 1.6;
+    }
+
+    ul {
+      list-style: none;
+    }
+
+    li strong {
+      color: #0077cc;
+    }
+
+    /* Contact form */
+    form {
+      display: flex;
+      flex-direction: column;
+      gap: 12px;
+    }
+
+    input, textarea {
+      padding: 10px;
+      border: 1px solid #ccc;
+      border-radius: 8px;
+      outline: none;
+      font-size: 0.95rem;
+    }
+
+    input:focus, textarea:focus {
+      border-color: #0077cc;
+      box-shadow: 0 0 4px rgba(0, 119, 204, 0.3);
+    }
+
+    .btn {
+      background-color: #0077cc;
+      color: white;
+      padding: 10px 0;
+      border: none;
+      border-radius: 8px;
+      font-weight: 600;
+      cursor: pointer;
+      transition: background-color 0.3s ease;
+    }
+
+    .btn:hover {
+      background-color: #005fa3;
+    }
+
+    footer {
+      text-align: center;
+      color: #666;
+      padding: 15px;
+      font-size: 0.9rem;
+    }
+
+    /* Responsive */
+    @media (max-width: 768px) {
+      .sidebar {
+        position: relative;
+        width: 100%;
+        flex-direction: row;
+        height: auto;
+        box-shadow: none;
+        justify-content: center;
+      }
+
+      .main-content {
+        margin-left: 0;
+        padding: 20px;
+      }
+
+      .profile-section {
+        display: none;
+      }
     }
   </style>
 </head>
+
 <body>
   <aside class="sidebar">
-    <div class="profile-section">
-      <img src="https://scontent.fdvo3-1.fna.fbcdn.net/v/t39.30808-6/480142091_1282407466319356_2080836848777294402_n.jpg?_nc_cat=102&ccb=1-7&_nc_sid=6ee11a&_nc_eui2=AeEXDAxDgBfqMM9UXYp4iiE2JuM-7Jp-1JIm4z7smn7UkqTx6jC3jnZPgvrrDVj8R89B3lN0PDF7_kRsQhPbUQvh&_nc_ohc=Y5Ck9nNjSi0Q7kNvwFjUuc2&_nc_oc=AdnYsJsbEG_MDY1vRmEAD6wps1I0LUgul6aiOEGKkD_FWj0nXFN2241P6ZWlL5sq-88&_nc_zt=23&_nc_ht=scontent.fdvo3-1.fna&_nc_gid=RJD3o3crFiLX9WolEg5igA&oh=00_AfcCP2mkCHt164QAdjlnmytqftKf6_dLdrb_seUuAyZIlw&oe=68FB8D4F" 
-        alt="Lovely Joy D. Pangilan" class="profile-img">
-      <h2>Lovely Joy D. Pangilan</h2>
-      <p class="tagline">Diploma in Information Technology</p>
-    </div>
+    <div>
+      <div class="profile-section">
+        <img src="https://scontent.fdvo3-1.fna.fbcdn.net/v/t39.30808-6/480142091_1282407466319356_2080836848777294402_n.jpg?_nc_cat=102&ccb=1-7&_nc_sid=6ee11a&_nc_eui2=AeEXDAxDgBfqMM9UXYp4iiE2JuM-7Jp-1JIm4z7smn7UkqTx6jC3jnZPgvrrDVj8R89B3lN0PDF7_kRsQhPbUQvh&_nc_ohc=Y5Ck9nNjSi0Q7kNvwFjUuc2&_nc_oc=AdnYsJsbEG_MDY1vRmEAD6wps1I0LUgul6aiOEGKkD_FWj0nXFN2241P6ZWlL5sq-88&_nc_zt=23&_nc_ht=scontent.fdvo3-1.fna&_nc_gid=RJD3o3crFiLX9WolEg5igA&oh=00_AfcCP2mkCHt164QAdjlnmytqftKf6_dLdrb_seUuAyZIlw&oe=68FB8D4F" 
+          alt="Lovely Joy D. Pangilan" class="profile-img">
+        <h2>Lovely Joy D. Pangilan</h2>
+        <p class="tagline">Diploma in Information Technology</p>
+      </div>
 
-    <nav class="nav-links">
-      <a href="#about">About</a>
-      <a href="#education">Education</a>
-      <a href="#experience">Experience</a>
-      <a href="#projects">Projects</a>
-      <a href="#labs">Labs</a>
-      <a href="#contact">Contact</a>
-    </nav>
+      <nav class="nav-links">
+        <a href="#about">About</a>
+        <a href="#education">Education</a>
+        <a href="#experience">Experience</a>
+        <a href="#projects">Projects</a>
+        <a href="#labs">Labs</a>
+        <a href="#contact">Contact</a>
+      </nav>
+    </div>
   </aside>
 
   <main class="main-content">
@@ -103,11 +257,9 @@
       </form>
     </section>
 
-    <footer class="footer">
+    <footer>
       <p>© 2025 Lovely Joy D. Pangilan — Portfolio</p>
     </footer>
   </main>
-
-  <script src="script.js"></script>
 </body>
 </html>
