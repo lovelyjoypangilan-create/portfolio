@@ -1,0 +1,198 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>My Profile - Lovely Joy Pangilan</title>
+  <style>
+    body {
+      font-family: Arial, sans-serif;
+      margin: 0;
+      background: #eaf7f7;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+    }
+
+    .profile-container {
+      display: flex;
+      width: 90%;
+      max-width: 1000px;
+      margin-top: 20px;
+      background: white;
+      border-radius: 10px;
+      overflow: hidden;
+      box-shadow: 0 4px 10px rgba(0,0,0,0.1);
+    }
+
+    aside {
+      width: 30%;
+      background: #2d6d6d;
+      color: white;
+      padding: 20px;
+      text-align: center;
+    }
+
+    aside img {
+      width: 120px;
+      border-radius: 50%;
+      margin-bottom: 10px;
+      border: 3px solid white;
+    }
+
+    main {
+      flex: 1;
+      padding: 20px;
+      background: #f9ffff;
+    }
+
+    section {
+      background: white;
+      padding: 15px;
+      margin-bottom: 15px;
+      border-radius: 8px;
+      border: 1px solid #c8e2e2;
+      box-shadow: 0 1px 3px rgba(0,0,0,0.1);
+    }
+
+    h2 {
+      color: #2d6d6d;
+      border-bottom: 2px solid #2d6d6d;
+      padding-bottom: 5px;
+    }
+
+    table {
+      width: 100%;
+      border-collapse: collapse;
+    }
+
+    th, td {
+      border: 1px solid #aaa;
+      padding: 8px;
+      text-align: center;
+    }
+
+    th {
+      background: #2d6d6d;
+      color: white;
+    }
+
+    footer {
+      width: 100%;
+      background: #2d6d6d;
+      color: white;
+      text-align: center;
+      padding: 15px 0;
+      margin-top: 20px;
+    }
+
+    a {
+      color: #ffd700;
+      text-decoration: none;
+    }
+
+    a:hover {
+      text-decoration: underline;
+    }
+
+    /* Contact form box */
+    .contact-box {
+      background: #e0f4f4;
+      border: 1px solid #b2d8d8;
+      padding: 15px;
+      border-radius: 8px;
+      text-align: center;
+      box-shadow: 0 1px 3px rgba(0,0,0,0.1);
+      font-size: 16px;
+    }
+
+    .contact-box form {
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      gap: 10px;
+      margin-top: 10px;
+    }
+
+    input {
+      width: 80%;
+      max-width: 400px;
+      padding: 10px;
+      border-radius: 5px;
+      border: 1px solid #aaa;
+      font-size: 14px;
+    }
+
+    button {
+      background: #2d6d6d;
+      color: white;
+      border: none;
+      padding: 10px 20px;
+      border-radius: 5px;
+      cursor: pointer;
+      font-weight: bold;
+    }
+
+    button:hover {
+      background: #1f4f4f;
+    }
+
+  </style>
+</head>
+<body>
+
+  <div class="profile-container">
+    <aside>
+      <img src="https://i.ibb.co/GvxKJsZB/1726736264956.jpg" alt="Lovely Joy Pangilan">
+      <h1>Lovely Joy Pangilan</h1>
+      <p>2nd Year IT Student<br>Davao del Sur State College</p>
+    </aside>
+
+    <main>
+      <section>
+        <h2>About Me</h2>
+        <p>I am studying Information Technology and I enjoy learning programming. My dream is to become a software developer after I graduate.</p>
+      </section>
+
+      <section>
+        <h2>My Skills</h2>
+        <table>
+          <tr>
+            <th>Skill</th>
+            <th>Level</th>
+          </tr>
+          <tr><td>HTML</td><td>Good</td></tr>
+          <tr><td>CSS</td><td>Average</td></tr>
+          <tr><td>Java</td><td>Average</td></tr>
+          <tr><td>Database</td><td>Average</td></tr>
+        </table>
+      </section>
+
+      <section>
+        <h2>My Goal</h2>
+        <p>I want to work in the IT industry and use my skills to help people by creating useful software and systems.</p>
+      </section>
+
+      <section>
+        <h2>Favorite Quote</h2>
+        <blockquote>
+          "Keep going, no matter how hard it gets."
+        </blockquote>
+      </section>
+
+      <section class="contact-box">
+        <h2>Contact Me</h2>
+        <form>
+          <input type="email" placeholder="Enter your email" required>
+          <input type="tel" placeholder="Enter your phone number" required>
+          <button type="submit">Submit</button>
+        </form>
+      </section>
+    </main>
+  </div>
+
+  <footer>
+    <p>© 2025 Lovely Joy Pangilan | All Rights Reserved</p>
+  </footer>
+
+</body>
+</html>
